@@ -1,30 +1,50 @@
 // Step One, get the information (controller, accept requests)
-function getMessage() {
-    let msg = document.getElementById("txtMessage").value;
+function getValues() {
+    let startValue = document.getElementById("startValue").value;
+    let endValue = document.getElementById("endValue").value;
 
-    displayMessage(msg);
+    displayValues(startValue, endValue);
 }
 
 
 
 // Final Step, display the information (view, displays stuff on screen)
-function displayMessage(message) {
+function displayValues(start, end) {
 
+    // convert inputs to numbers; javascript will do this automatically
+    // in the for loop below, but i want to be explicit
+    let startNum = parseInt(start);
+    let endNum = parseInt(end);
 
-    // Bootstrap numbered list format: <li class="list-group-item">A list item</li>
-    // let item = `<li class="list-group-item">${message}</li>`;
+    // clear previous run
+    clrScreen();
 
     // first get the ol element from the page
     element = document.getElementById("results");
 
-    // next create a new li element
-    let item = document.createElement("li");
+    for (let i = startNum; i <= endNum; i++) {
 
-    // add classes to li element
-    item.classList.add("list-group-item");
+        // next create a new li element
+        let item = document.createElement("li");
 
-    // set the message for the li element
-    item.innerHTML = message;
+        if (i % 2 == 0) {
+            item.classList.add("even-style");
+        } else {
+            item.classList.add("odd-style");
+        }
 
-    element.appendChild(item);
+        // add classes to li element
+        item.classList.add("list-group-item");
+
+        // set the message for the li element
+        item.innerHTML = i;
+
+        // add item to list
+        element.appendChild(item);
+    }
+}
+
+// this function clears the screen
+function clrScreen() {
+    document.getElementById("results").innerHTML = '';
 }

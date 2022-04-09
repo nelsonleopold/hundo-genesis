@@ -65,20 +65,31 @@
 
     <main class="flex-shrink-0">
         <div class="container mt-5">
-            <h1>Hundo:</h1>
+            <img src="/img/hundoTransparent1028x356Resized.png" width="400" alt="">
             <div class="row align-items-end">
                 <div class="col">
-                    <label for="txtMessage" class="form-label">Item</label>
-                    <input type="text" name="txtMessage" class="form-control" id="txtMessage"
-                        onfocus="this.placeholder=''" placeholder="Write Task Here">
+                    <label for="txtMessage" class="form-label">Prints numbers from 1 to 100. Bolds the even
+                        numbers.</label>
+                    <div class="row">
+                        <div class="col">
+                            <label class="form-label" for="startValue">Enter a Start Value</label>
+                            <input class="form-control" type="number" id="startValue" value="1">
+                        </div>
+                        <div class="col">
+                            <label class="form-label" for="endValue">Enter an Ending Value</label>
+                            <input class="form-control" type="number" id="endValue" value="100">
+                        </div>
+                    </div>
                 </div>
-                <div class="col">
-                    <button id="btnDisplayMessage" class="btn btn-primary">Add</button>
+                <div class="row">
+                    <div class="col">
+                        <button id="btnDisplayMessage" class="btn btn-primary btn-lg mt-2">Start</button>
+                    </div>
                 </div>
             </div>
 
-            <div class="message mt-5">
-                <ol id="results" class="list-group list-group-numbered">
+            <div class="ol-style mt-5">
+                <ol id="results" class="list-group">
                     <!-- My items will go here -->
                 </ol>
             </div>
@@ -118,7 +129,7 @@
     <script src="/js/site.js"></script>
 
     <script>
-        document.getElementById("btnDisplayMessage").addEventListener("click", getMessage);
+        document.getElementById("btnDisplayMessage").addEventListener("click", getValues);
     </script>
 
 </body>
