@@ -24,7 +24,7 @@ function displayValues(start, end) {
 
     for (let i = startNum; i <= endNum; i++) {
 
-        // next create a new li element
+        // next create a new div element
         let item = document.createElement("div");
 
         if (i % 2 == 0) {
@@ -33,10 +33,10 @@ function displayValues(start, end) {
             item.classList.add("odd-style");
         }
 
-        // add classes to li element
+        // add classes to div element
         item.classList.add("col");
 
-        // set the message for the li element
+        // set the message for the div element
         item.innerHTML = i;
 
         // add item to list
