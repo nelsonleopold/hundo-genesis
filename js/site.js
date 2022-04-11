@@ -25,7 +25,7 @@ function displayValues(start, end) {
     for (let i = startNum; i <= endNum; i++) {
 
         // next create a new li element
-        let item = document.createElement("li");
+        let item = document.createElement("div");
 
         if (i % 2 == 0) {
             item.classList.add("even-style");
@@ -34,7 +34,7 @@ function displayValues(start, end) {
         }
 
         // add classes to li element
-        item.classList.add("list-group-item");
+        item.classList.add("col");
 
         // set the message for the li element
         item.innerHTML = i;
