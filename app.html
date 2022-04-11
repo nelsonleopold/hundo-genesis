@@ -66,17 +66,34 @@
     <main class="flex-shrink-0">
         <div class="container mt-5">
             <img src="/img/hundoTransparent1028x356Resized.png" width="400" alt="">
-            <div class="row align-items-end">
+            <div class="row align-items-end mt-5">
                 <div class="col">
-                    <label for="txtMessage" class="form-label">Prints numbers from 1 to 100. Bolds the even
-                        numbers.</label>
-                    <div class="row">
+                    <div class="row mb-5">
                         <div class="col">
-                            <label class="form-label" for="startValue">Enter a Start Value</label>
+                            <label for="txtMessage" class="form-label">
+                                <h1>A Coding Challenge:</h1>
+                            </label>
+                            <hr>
+                            <p>A javascript coding exercise using loops, functions, and 
+                                conditional logic. Write a program that displays the number 
+                                from 1 to 100. Display the even numbers in <span class="fw-bold">Bold</span> 
+                                and odd numbers in <span class="text-danger">Red</span>.</p>
+                        </div>
+                        <div class="col">
+                            <label for="txtMessage" class="form-label">
+                                <h1>Instructions:</h1>
+                            </label>
+                            <hr>
+                            <p>Enter a starting value and an ending value. Then click the Start button.</p>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col">
+                            <label class="form-label" for="startValue"><h3>Enter a Start Value</h3></label>
                             <input class="form-control" type="number" id="startValue" value="1">
                         </div>
                         <div class="col">
-                            <label class="form-label" for="endValue">Enter an Ending Value</label>
+                            <label class="form-label" for="endValue"><h3>Enter an Ending Value</h3></label>
                             <input class="form-control" type="number" id="endValue" value="100">
                         </div>
                     </div>
@@ -88,8 +105,11 @@
                 </div>
             </div>
 
-            <div class="ol-style mt-5">
-                <div id="results" class="row row-cols-5">
+            <div class="div-style mt-5">
+                <label for="txtMessage" class="form-label">
+                    <h1>Results:</h1>
+                </label>
+                <div id="results" class="row row-cols-5 row-cols-md-5">
                     <!-- My items will go here -->
                 </div>
             </div>

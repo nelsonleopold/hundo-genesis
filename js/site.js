@@ -17,7 +17,7 @@ function displayValues(start, end) {
     let endNum = parseInt(end);
 
     // clear previous run
-    clrScreen();
+    clrResults();
 
     // first get the ol element from the page
     element = document.getElementById("results");
@@ -45,6 +45,6 @@ function displayValues(start, end) {
 }
 
 // this function clears the screen
-function clrScreen() {
+function clrResults() {
     document.getElementById("results").innerHTML = '';
 }
